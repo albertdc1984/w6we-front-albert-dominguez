@@ -1,3 +1,6 @@
-export const actionTypes = {
-  loadRobots: "load-robots",
-};
+import { actionTypes } from "./actionTypes";
+
+export const loadRobots = (robots) => ({
+  type: actionTypes.loadRobots,
+  robots,
+});
