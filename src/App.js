@@ -1,24 +1,23 @@
 import "./App.css";
-import RobotDetail from "./components/RobotDetail/RobotDetail";
 
-import { RobotList } from "./components/RobotList/RobotList";
+import { Navigate, Route, Routes } from "react-router-dom";
 
-const fakeRobot = {
-  _id: "621145058f8f1a4e0bc56905",
-  image:
-    "https://i0.wp.com/theelectricagora.com/wp-content/uploads/2016/06/astro_boy1.jpg?fit=688%2C712&ssl=1",
-  velocity: 10,
-  resistance: 10,
-  year: 1952,
-  name: "Astroboy",
-};
+import MainPage from "./pages/MainPage/MainPage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+import RobotPage from "./pages/RobotPage/RobotPage";
+import CreatePage from "./pages/CreatePage/CreatePage";
+
 function App() {
   return (
-    <div className="App">
-      <h1>ROBOTS</h1>
-      <RobotList />
-      <RobotDetail robot={fakeRobot} />
-    </div>
+    <>
+      <Routes>
+        <Route path="/robots" element={<MainPage />} />
+        <Route path="/" element={<Navigate to="/robots" />} />
+        <Route path="/robots/:id" element={<RobotPage />} />
+        <Route path="/robots/create" element={<CreatePage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </>
   );
 }
 
