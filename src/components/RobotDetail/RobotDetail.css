@@ -1,13 +1,17 @@
-.robot-container {
+.main-robot-detail-container {
+  display: flex;
+  justify-content: center;
+}
+.robot-detail-container {
   display: flex;
   flex-direction: column;
-  width: 240px;
-  height: 40vh;
+  width: 60vw;
+  height: 80vh;
   justify-content: center;
   align-items: center;
   border-width: 3px;
   border-style: solid;
-  margin: 4px;
+  margin: 10px;
   background-color: aquamarine;
   border-radius: 6px;
 }
@@ -15,18 +19,18 @@ h2 {
   margin: 0;
   padding: 0;
 }
-.robot-image-container {
+.robot-detail-image-container {
   width: 90%;
-  height: 50%;
+  height: 70%;
   border-width: 3px;
   border-style: solid;
   display: flex;
   background-color: darkcyan;
 }
-.robot-image-container img {
+.robot-detail-image-container img {
   width: 100%;
   object-fit: cover;
-  object-position: 0px -20px;
+  object-position: center;
 }
 .robot-attributes {
   list-style: none;

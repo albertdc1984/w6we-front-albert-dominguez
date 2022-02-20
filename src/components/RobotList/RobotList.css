@@ -1,0 +1,7 @@
+.robot-list-container {
+  display: flex;
+  width: 100 vw;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
