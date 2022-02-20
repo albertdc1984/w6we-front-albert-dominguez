@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Button from "../Button/Button";
 import "./Robot.css";
 
 const Robot = ({ robot }) => {
@@ -17,6 +18,7 @@ const Robot = ({ robot }) => {
         <li>Resistance:{robot.resistance}</li>
         <li>Year:{robot.year}</li>
       </ul>
+      <Button className={"delete-button"} text={"delete"} />
     </div>
   );
 };
