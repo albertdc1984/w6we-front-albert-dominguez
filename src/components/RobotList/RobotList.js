@@ -14,7 +14,7 @@ export const RobotList = () => {
   return (
     <div className="robot-list-container">
       {robots.map((robot) => (
-        <Robot robot={robot} key={robot.id} />
+        <Robot robot={robot} key={robot._id} />
       ))}
     </div>
   );
