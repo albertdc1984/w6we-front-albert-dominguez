@@ -1,9 +1,10 @@
-import { loadRobots } from "../actions/actionsCreator";
+import { loadRobotsAction } from "../actions/actionsCreator";
 
 export const loadRobotsThunk = async (dispatch) => {
+  debugger;
   const response = await fetch(process.env.REACT_APP_API_URL);
   const robots = await response.json();
 
   if (!response.ok) return;
-  dispatch(loadRobots(robots));
+  dispatch(loadRobotsAction(robots.robots));
 };

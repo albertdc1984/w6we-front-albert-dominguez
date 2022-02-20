@@ -1,6 +1,3 @@
-import { actionTypes } from "./actionsCreator";
-
-export const loadRobots = (robots) => ({
-  type: actionTypes.loadRobots,
-  robots,
-});
+export const actionTypes = {
+  loadRobots: "load-robots",
+};

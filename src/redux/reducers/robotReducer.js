@@ -1,6 +1,6 @@
-import { actionTypes } from "../actions/actionsCreator";
+import { actionTypes } from "../actions/actionTypes";
 
-export const robotReducer = (robots = [], action = {}) => {
+export const robotReducer = (currentRobots = [], action = {}) => {
   let newRobots;
 
   switch (action.type) {
@@ -9,7 +9,7 @@ export const robotReducer = (robots = [], action = {}) => {
       break;
 
     default:
-      newRobots = [...robots];
+      newRobots = [...currentRobots];
       break;
   }
 
