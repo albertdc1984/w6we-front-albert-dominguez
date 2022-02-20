@@ -1,0 +1,31 @@
+.robot-container {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+  border-width: 3px;
+  border-style: solid;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+}
+.robot-image-container {
+  width: 90%;
+  height: 50%;
+  border-width: 3px;
+  border-style: solid;
+  display: flex;
+}
+.robot-image-container img {
+  width: 100%;
+  object-fit: cover;
+  object-position: 0px -20px;
+}
+.robot-attributes {
+  list-style: none;
+  margin: 4px;
+  padding: 0;
+}

@@ -1,15 +1,16 @@
-const Robot = () => {
+import "./Robot.css";
+
+const Robot = ({ robot }) => {
   return (
     <div className="robot-container">
-      <img
-        src="https://www.adhesivosnatos.com/wp-content/uploads/2019/01/pegatina-redonda-arale-lengua-impresa.jpg"
-        alt="Arale"
-      />
-      <h2 className="robot-name">Arale</h2>
+      <div className="robot-image-container">
+        <img src={robot.image} alt={robot.name} />
+      </div>
+      <h2 className="robot-name">{robot.name}</h2>
       <ul className="robot-attributes">
-        <li>Velocity: 10</li>
-        <li>Resistance:10</li>
-        <li>Year:1981</li>
+        <li>Velocity: {robot.velocity}</li>
+        <li>Resistance:{robot.resistance}</li>
+        <li>Year:{robot.year}</li>
       </ul>
     </div>
   );
