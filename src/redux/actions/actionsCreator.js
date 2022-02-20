@@ -9,3 +9,7 @@ export const loadOneRobotAction = (robot) => ({
   type: actionTypes.loadOneRobot,
   robot,
 });
+export const deleteOneRobotAction = (robot) => ({
+  type: actionTypes.deleteOneRobot,
+  robot,
+});
