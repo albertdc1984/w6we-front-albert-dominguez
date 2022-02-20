@@ -32,6 +32,18 @@ h2 {
   object-fit: cover;
   object-position: center;
 }
+@media (min-width: 750px) {
+  .robot-detail-image-container img {
+    object-fit: cover;
+    object-position: center;
+  }
+  @media (min-width: 400px) {
+    .robot-detail-image-container img {
+      object-fit: cover;
+      object-position: 0px -5vh;
+    }
+  }
+}
 .robot-attributes {
   list-style: none;
   margin: 4px;
