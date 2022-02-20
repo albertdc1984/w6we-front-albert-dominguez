@@ -17,14 +17,27 @@ export const robotReducer = (currentRobots = [], action = {}) => {
 };
 
 export const oneRobotReducer = (currentRobot = {}, action = {}) => {
-  let newRobot;
+  let newRobots;
   switch (action.type) {
     case actionTypes.loadOneRobot:
-      newRobot = { ...action.robot };
+      newRobots = { ...action.robot };
       break;
 
     default:
-      newRobot = { ...currentRobot };
+      newRobots = { ...currentRobot };
   }
-  return newRobot;
+  return newRobots;
+};
+
+export const deleteOneRobotReducer = (currentRobot = {}, action = {}) => {
+  let newRobots;
+  switch (action.type) {
+    case actionTypes.deleteOneRobot:
+      newRobots = currentRobot.filter((robot) => action.id !== robot.id);
+      break;
+
+    default:
+      newRobots = { ...currentRobot };
+  }
+  return newRobots;
 };
