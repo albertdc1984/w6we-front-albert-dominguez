@@ -15,3 +15,16 @@ export const robotReducer = (currentRobots = [], action = {}) => {
 
   return newRobots;
 };
+
+export const oneRobotReducer = (currentRobot = {}, action = {}) => {
+  let newRobot;
+  switch (action.type) {
+    case actionTypes.loadOneRobot:
+      newRobot = { ...action.robot };
+      break;
+
+    default:
+      newRobot = { ...currentRobot };
+  }
+  return newRobot;
+};
